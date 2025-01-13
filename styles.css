@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Nunito";
+    src: url(Nunito-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header.toporsmth {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+}
+
+header.showcase {
+    background-image: url('weird_pictures/my_pc.png'); /* Ensure the correct path to the image */
+    background-size: cover; /* Proportionally covers the area */
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    height: 40vw; /* Fixes the header height */
+    text-align: center;
+    position: relative; /* Allows positioning child elements absolutely */
+}
+
+.text_stuff {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: rgb(141, 227, 171); /* Change text color for better contrast if needed */
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+
+.junk {
+    position: absolute;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.2) 0%, rgba(37, 56, 67, 0.6) 20%, rgba(37, 56, 67,1) 60%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.button_press {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.silly_button_stuff {
+    background-color: rgb(161, 255, 191);
+    color: rgb(2, 0, 71);
+    padding: 0.5em 1em;
+    border: 0.5px solid white;
+    border-radius: 5%;
+    
+    font-family: "Nunito";
+    font-weight: bolder;
+}
+
+.goofy_pic {
+    border-radius: 25%;
+
+    background-image: url('weird_pictures/silly_fella.png');
+    background-size: cover; /* Proportionally covers the area */
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 30%;
+    height: 80%;
+
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.panel {
+    border-radius: 5%;
+
+    background: rgb(136,136,136);
+    background: linear-gradient(180deg, rgba(136,136,136,1) 0%, rgba(99,99,99,1) 100%);
+    
+    aspect-ratio: 1 / 1.5;
+    width: 25%;
+}
+
+.picture {
+    background-image: url('weird_pictures/silly_fella.png');
+    background-size: cover; /* Proportionally covers the area */
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: relative;
+}
