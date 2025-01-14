@@ -30,7 +30,28 @@
 
         <div class="goofy_pic hover_size"></div>
         
-        <button onclick="alert('Scam alert! You got scammed! :O')" style="position: absolute; transform: translate(-50%, -50%); border: 2px solid black; border-radius: 10%; top: 80%; left: 30%; top: 85%; background-color: aqua; height: 3vw; width: 15vw; font-size: 1vw; font-weight: bolder;"> More Info </button>
+        <button 
+            onmouseenter="this.style.transform = 'translate(-50%, -50%) scale(1.05)';" 
+            onmouseleave="this.style.transform = 'translate(-50%, -50%) scale(1)';" 
+            onclick="window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });" 
+            style="
+                position: absolute; 
+                top: 85%; 
+                left: 30%; 
+                transform: translate(-50%, -50%); 
+                border: 2px solid black; 
+                border-radius: 10%; 
+                background-color: aqua; 
+                height: 3vw; 
+                width: 15vw; 
+                font-size: 1vw; 
+                font-weight: bolder; 
+                transition: transform 0.2s ease-in-out;
+            "
+            >
+            More Info
+        </button>
+
     </header>
 
     <header style="background: linear-gradient(180deg, rgba(11,101,0,1) 0%, rgba(34,163,0,1) 40%, rgba(34,163,0,1) 60%, rgba(11,101,0,1) 100%); height: 50vw">
