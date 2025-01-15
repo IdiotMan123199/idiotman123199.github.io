@@ -33,17 +33,18 @@
         <button 
             onmouseenter="this.style.transform = 'translate(-50%, -50%) scale(1.05)';" 
             onmouseleave="this.style.transform = 'translate(-50%, -50%) scale(1)';" 
-            onclick="window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });" 
+            onclick="window.scrollBy({ top: 1000 , behavior: 'smooth' });" 
             style="
                 position: absolute; 
                 top: 85%; 
                 left: 30%; 
                 transform: translate(-50%, -50%); 
                 border: 2px solid black; 
-                border-radius: 10%; 
+                border-radius: 2vh; 
                 background-color: aqua; 
                 height: 3vw; 
                 width: 15vw; 
+                font-family: 'Roboto';
                 font-size: 1vw; 
                 font-weight: bolder; 
                 transition: transform 0.2s ease-in-out;
@@ -66,14 +67,17 @@
             text-align: center;
             vertical-align: middle;
             width: 50vw;
-            height: 9vh;
+            height: 5vw;
             border: 3px solid black;
             display: flex; 
             justify-content: center; 
             align-items: center; 
             flex-direction: column; 
-            "> 
-            
+            transition: transform 0.25s ease-out;
+            "
+            onmouseenter="this.style.transform = 'translate(-50%, -50%) scale(1.05)';" 
+            onmouseleave="this.style.transform = 'translate(-50%, -50%) scale(1)';">
+
             HOBBIES & INTERESTS
         </div>
 

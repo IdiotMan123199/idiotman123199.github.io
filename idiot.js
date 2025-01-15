@@ -12,3 +12,12 @@ hoveringStuffs.forEach(function(hoveringStuff) {
         hoveringStuff.style.transform = "scale(1)";
     });
 });
+
+var slidingStuff = document.getElementById("myRange");
+var slidingThing = document.getElementById("movingThing");
+
+slidingThing.style.position = "relative";
+
+slidingStuff.addEventListener("input", function() {
+    slidingThing.style.right = (2 * slidingStuff.value) + "%";
+}); 

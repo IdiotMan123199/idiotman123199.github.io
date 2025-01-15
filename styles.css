@@ -3,9 +3,15 @@
     src: url(Nunito-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: "Roboto";
+    src: url(Roboto-VariableFont_wdth\,wght.ttf);
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    background-color: rgb(183, 255, 183)
 }
 
 header.toporsmth {
@@ -57,7 +63,7 @@ header.showcase {
 .silly_button_stuff {
     background-color: rgb(161, 255, 191);
     color: rgb(2, 0, 71);
-    padding: 0.5em 1em;
+    padding: 0.5vw 1vw;
     border: 0.5px solid white;
     border-radius: 5%;
     
@@ -98,4 +104,39 @@ header.showcase {
     background-position: center;
 
     position: relative;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+}
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 75%; /* Full-width */
+    height: 1.5vh; /* Specified height */
+    background: #ffffff; /* Grey background */
+    border-radius: 1.5vh;
+    outline: none; /* Remove outline */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 3vh; /* Set a specific slider handle width */
+    height: 3vh; /* Slider handle height */
+    background: #000000; /* Green background */
+    border-radius: 50%;
+    cursor: pointer; /* Cursor on hover */
 }
