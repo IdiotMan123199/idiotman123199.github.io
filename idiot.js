@@ -16,8 +16,11 @@ hoveringStuffs.forEach(function(hoveringStuff) {
 var slidingStuff = document.getElementById("myRange");
 var slidingThing = document.getElementById("movingThing");
 
-slidingThing.style.position = "relative";
-
-slidingStuff.addEventListener("input", function() {
-    slidingThing.style.right = (2 * slidingStuff.value) + "%";
-}); 
+if (slidingThing) 
+{
+    slidingThing.style.position = "relative";
+    
+    slidingStuff.addEventListener("input", function() {
+        slidingThing.style.right = (2 * slidingStuff.value) + "%";
+    }); 
+}
