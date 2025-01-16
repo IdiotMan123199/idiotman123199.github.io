@@ -19,8 +19,16 @@ var slidingThing = document.getElementById("movingThing");
 if (slidingThing) 
 {
     slidingThing.style.position = "relative";
+    slidingThing.style.right = (3 * slidingStuff.value) + "%";
+
+    var percentage = slidingStuff.value/slidingStuff.max;
+    slidingThing.style.backgroundColor = "rgb(" + (1 - percentage) * 255 + "," + (percentage) * 255 + "," + (percentage) * 255 + ")";
     
     slidingStuff.addEventListener("input", function() {
-        slidingThing.style.right = (2 * slidingStuff.value) + "%";
+        slidingThing.style.right = (3 * slidingStuff.value) + "%";
+
+        var percentage = slidingStuff.value/slidingStuff.max;
+
+        slidingThing.style.backgroundColor = "rgb(" + (1 - percentage) * 255 + "," + (percentage) * 255 + "," + (percentage) * 255 + ")";
     }); 
 }
