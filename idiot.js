@@ -32,3 +32,23 @@ if (slidingThing)
         slidingThing.style.backgroundColor = "rgb(" + (1 - percentage) * 255 + "," + (percentage) * 255 + "," + (percentage) * 255 + ")";
     }); 
 }
+
+var slidingStuff2 = document.getElementById("myRange_2");
+var slidingThing2 = document.getElementById("movingThing2");
+
+if (slidingThing2) 
+{
+    slidingThing2.style.position = "relative";
+    slidingThing2.style.right = (3 * slidingStuff2.value) + "%";
+
+    var percentage = slidingStuff2.value/slidingStuff.max;
+    slidingThing2.style.backgroundColor = "rgb(" + (1 - percentage) * 255 + "," + (percentage) * 255 + "," + (percentage) * 255 + ")";
+    
+    slidingStuff2.addEventListener("input", function() {
+        slidingThing2.style.right = (3 * slidingStuff2.value) + "%";
+
+        var percentage = slidingStuff2.value/slidingStuff2.max;
+
+        slidingThing2.style.backgroundColor = "rgb(" + (1 - percentage) * 255 + "," + (percentage) * 255 + "," + (percentage) * 255 + ")";
+    }); 
+}
