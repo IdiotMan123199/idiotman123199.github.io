@@ -13,62 +13,28 @@ hoveringStuffs.forEach(function(hoveringStuff) {
     });
 });
 
-var slidingStuff = document.getElementById("myRange");
-var slidingThing = document.getElementById("movingThing");
+for (let i = 0; i < 4; i++) {
+    let slidingStuff = document.getElementById("myRange_" + i);
+    let slidingThing = document.getElementById("movingThing" + i);
 
-if (slidingThing) 
-{
+    if (!slidingStuff || !slidingThing) continue; // Skip if elements are missing
+
+    let numOfElements = (slidingThing.children.length - 1);
+
     slidingThing.style.position = "relative";
-    slidingThing.style.right = (3 * slidingStuff.value) + "%";
-
-    var percentage = slidingStuff.value/slidingStuff.max;
-    slidingThing.style.backgroundColor = "rgb(" + (1 - percentage) * 255 + "," + (percentage) * 255 + "," + (percentage) * 255 + ")";
     
-    slidingStuff.addEventListener("input", function() {
-        slidingThing.style.right = (3 * slidingStuff.value) + "%";
+    function updateStyles() {
+        let value = parseFloat(slidingStuff.value); 
+        let max = parseFloat(slidingStuff.max); 
+        let percentage = value / max;
 
-        var percentage = slidingStuff.value/slidingStuff.max;
+        slidingThing.style.right = (numOfElements * value) + "%";
+        slidingThing.style.backgroundColor = `rgb(${(1 - percentage) * 255}, ${percentage * 255}, ${percentage * 255})`;
+    }
 
-        slidingThing.style.backgroundColor = "rgb(" + (1 - percentage) * 255 + "," + (percentage) * 255 + "," + (percentage) * 255 + ")";
-    }); 
-}
+    // Initialize styles
+    updateStyles();
 
-var slidingStuff2 = document.getElementById("myRange_2");
-var slidingThing2 = document.getElementById("movingThing2");
-
-if (slidingThing2) 
-{
-    slidingThing2.style.position = "relative";
-    slidingThing2.style.right = (3 * slidingStuff2.value) + "%";
-
-    var percentage = slidingStuff2.value/slidingStuff.max;
-    slidingThing2.style.backgroundColor = "rgb(" + (1 - percentage) * 255 + "," + (percentage) * 255 + "," + (percentage) * 255 + ")";
-    
-    slidingStuff2.addEventListener("input", function() {
-        slidingThing2.style.right = (3 * slidingStuff2.value) + "%";
-
-        var percentage = slidingStuff2.value/slidingStuff2.max;
-
-        slidingThing2.style.backgroundColor = "rgb(" + (1 - percentage) * 255 + "," + (percentage) * 255 + "," + (percentage) * 255 + ")";
-    }); 
-}
-
-var slidingStuff3 = document.getElementById("myRange_3");
-var slidingThing3 = document.getElementById("movingThing3");
-
-if (slidingThing3) 
-{
-    slidingThing3.style.position = "relative";
-    slidingThing3.style.right = (3 * slidingStuff3.value) + "%";
-
-    var percentage = slidingStuff3.value/slidingStuff3.max;
-    slidingThing3.style.backgroundColor = "rgb(" + (1 - percentage) * 255 + "," + (percentage) * 255 + "," + (percentage) * 255 + ")";
-    
-    slidingStuff3.addEventListener("input", function() {
-        slidingThing3.style.right = (3 * slidingStuff3.value) + "%";
-
-        var percentage = slidingStuff3.value/slidingStuff3.max;
-
-        slidingThing3.style.backgroundColor = "rgb(" + (1 - percentage) * 255 + "," + (percentage) * 255 + "," + (percentage) * 255 + ")";
-    }); 
+    // Attach event listener
+    slidingStuff.addEventListener("input", updateStyles);
 }
