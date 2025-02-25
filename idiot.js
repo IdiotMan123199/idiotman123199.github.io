@@ -20,6 +20,9 @@ for (let i = 0; i < 4; i++) {
     if (!slidingStuff || !slidingThing) continue; // Skip if elements are missing
 
     let numOfElements = (slidingThing.children.length - 1);
+    let setWidth = String((numOfElements + 1) * 100) + "%";
+    
+    slidingThing.style.width = setWidth;
 
     slidingThing.style.position = "relative";
     

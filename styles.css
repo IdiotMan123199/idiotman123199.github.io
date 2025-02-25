@@ -134,8 +134,8 @@ header.showcase {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
-    width: 2em; /* Set a specific slider handle width */
-    height: 2em; /* Slider handle height */
+    width: 6vh; /* Set a specific slider handle width */
+    height: 3vh; /* Slider handle height */
     background: #ff0000; /* Green background */
     border-radius: 50vw;
     cursor: pointer; /* Cursor on hover */
