@@ -32,7 +32,11 @@ for (let i = 0; i < 4; i++) {
         let percentage = value / max;
 
         slidingThing.style.right = (numOfElements * value) + "%";
-        slidingThing.style.backgroundColor = `rgb(${(1 - percentage) * 255}, ${percentage * 255}, ${percentage * 255})`;
+
+        if (slidingThing.dataset.colorchange != "false") 
+        {
+            slidingThing.style.backgroundColor = `rgb(${(1 - percentage) * 255}, ${percentage * 255}, ${percentage * 255})`;
+        }
     }
 
     // Initialize styles
