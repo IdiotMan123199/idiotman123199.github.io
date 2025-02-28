@@ -13,11 +13,25 @@ hoveringStuffs.forEach(function(hoveringStuff) {
     });
 });
 
-for (let i = 0; i < 4; i++) {
+let a = 0
+for (let i = 0; true; i++) {
     let slidingStuff = document.getElementById("myRange_" + i);
     let slidingThing = document.getElementById("movingThing" + i);
 
-    if (!slidingStuff || !slidingThing) continue; // Skip if elements are missing
+    if (!slidingStuff || !slidingThing) 
+    {
+        a += 1;
+
+        if (a > 2) 
+        {
+            console.log("Stop!");
+            break;
+        }
+        else
+        {
+            continue; // Skip if elements are missing
+        }
+    }
 
     let numOfElements = (slidingThing.children.length - 1);
     let setWidth = String((numOfElements + 1) * 100) + "%";
