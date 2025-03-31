@@ -22,6 +22,8 @@ header.toporsmth {
     justify-content: space-evenly;
     align-items: center;
     height: 50px;
+    z-index: 100;
+    flex: 1 1 auto;
 }
 
 header.showcase {
@@ -155,4 +157,8 @@ line {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.relative_pos {
+    position: relative;
 }

@@ -1,11 +1,32 @@
 var hoveringStuffs = document.querySelectorAll(".hover_size");
 
+var topThing = document.querySelector(".toporsmth");
+
+window.addEventListener('scroll', function() {
+    topThing.style.position = "fixed";
+    topThing.style.width = "100%";
+    
+    var bgOpacity = Math.max(10/(window.scrollY/10), .05);
+    topThing.style.backgroundColor = "rgba(0, 0, 0, " + bgOpacity + ")";
+
+    console.log(this.window.scrollY);
+    console.log("rgba(0, 0, 0, " + bgOpacity + ")");
+});
+
 hoveringStuffs.forEach(function(hoveringStuff) {
     hoveringStuff.style.transition = "transform 0.2s ease-in-out";
 
     hoveringStuff.addEventListener('mouseenter', function() {
         hoveringStuff.style.transformOrigin = "center";
-        hoveringStuff.style.transform = "scale(1.05)";
+        
+        if (hoveringStuff.classList.contains("miniHover"))
+        {
+            hoveringStuff.style.transform = "scale(1.015)";
+        }  
+        else
+        {
+            hoveringStuff.style.transform = "scale(1.05)";
+        }
     });
 
     hoveringStuff.addEventListener('mouseleave', function() {
