@@ -5,12 +5,13 @@ var topThing = document.querySelector(".toporsmth");
 window.addEventListener('scroll', function() {
     topThing.style.position = "fixed";
     topThing.style.width = "100%";
-    
-    var bgOpacity = Math.max(10/(window.scrollY/10), .05);
-    topThing.style.backgroundColor = "rgba(0, 0, 0, " + bgOpacity + ")";
 
-    console.log(this.window.scrollY);
-    console.log("rgba(0, 0, 0, " + bgOpacity + ")");
+    if (this.window.scrollY <= 0) {
+        topThing.style.position = "relative";
+    }
+    
+    var bgOpacity = Math.max(10/(window.scrollY/10), .005);
+    topThing.style.backgroundColor = "rgba(0, 0, 0, " + bgOpacity + ")";
 });
 
 hoveringStuffs.forEach(function(hoveringStuff) {

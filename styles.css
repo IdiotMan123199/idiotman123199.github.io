@@ -151,7 +151,8 @@ line {
     position: relative;
 
     width: 100%;
-    height: 0.5%;
+    height: 1.5vw;
+    font-size: 1px;
     background-color: black;
 
     display: flex;
