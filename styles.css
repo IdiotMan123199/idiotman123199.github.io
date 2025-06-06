@@ -139,6 +139,8 @@ header.showcase {
     width: 6vh; /* Set a specific slider handle width */
     height: 2vh; /* Slider handle height */
     background: #000000; /* Green background */
+    background-image: url("weird_pictures/next.png");
+    background-size: 100% 100%;
     border-radius: 50vw;
     cursor: pointer; /* Cursor on hover */
 }
